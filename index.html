@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto+Condensed:wght@300&family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/root.css">
+    <title>solsystem</title>
+</head>
+<body>
+    <header class="header">
+        <h1>SOLSYSTEMET</h1>
+        <h2>SOLARIS</h2>
+    </header>
+
+    <div class="sun" data-planet="Solen"></div>
+    <section class="select"><h2 class="planet-selected"></h2></section>
+    <section class="flex planet-section">
+        <section class="planet" data-planet="Merkurius"></section>
+        <section class="planet" data-planet="Venus"></section>
+        <section class="planet" data-planet="Jorden"></section>
+        <section class="planet" data-planet="Mars"></section>
+        <section class="planet" data-planet="Jupiter"></section>
+        <section class="planet" data-planet="Saturnus"></section>
+        <section class="planet" data-planet="Uranus"></section>
+        <section class="planet" data-planet="Neptunus"></section>
+    </section>
+
+    <section class="overlay">
+        <div class="exit">&#9587</div>
+        <div class="wrapper">
+            <div class="planet-color"></div>
+            <section class="describtion">
+                <section class="describtion--header">
+                    <h1 class="planet-name"></h1>
+                    <h2>TELLUS</h2>
+                </section>
+                <p id="describtion-data"></p>
+            </section>
+            <section class="facts">
+                <section class="area">
+                    <h2>OMKRETS</h2>
+                    <p><span id="area-data"></span> KM</p>
+                </section>
+                <section class="distant-sun">
+                    <h2>KM FRÅN SOLEN</h2>
+                    <p><span id="distant-data"></span> KM</p>
+                </section>
+                <section class="max-temp">
+                    <h2>MAX TEMPERATUR</h2>
+                    <p><span id="max-temp-data"></span> C</p>
+                </section>
+                <section class="min-temp">
+                    <h2>MIN TEMPERATUR</h2>
+                    <p><span id="min-temp-data"></span> C</p>
+                </section>
+            </section>
+            <section class="moons">
+                <h2>MÅNAR</h2>
+                <section class="moons-list"></section>
+            </section>
+        </div>
+    </section>
+
+    <script src="js/index.js" type="module"></script>
+</body>
+</html>

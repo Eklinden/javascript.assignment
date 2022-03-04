@@ -1,0 +1,280 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+a, button {
+    cursor: revert;
+}
+
+ol, ul, menu {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background: linear-gradient(269.84deg, #0C164D 0.11%, #190B22 99.83%);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+}
+
+.header {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: var(--fs-header);
+    font-family: var(--ff-header);
+    color: var(--clr-text);
+    letter-spacing: 0.6rem;
+    text-align: right;
+}
+.header h2 {
+    font-size: 2rem;
+    font-family: var(--ff-logotext);
+    color: var(--clr-logotext);
+}
+.sun {
+    position: absolute;
+    background: var(--clr-sun);
+    width: 100vh;
+    height: 120vh;
+    border-radius: 50%;
+    top: -10%;
+    left: -750px;
+    transition: transform 500ms ease;
+    cursor: pointer;
+}
+.sun:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px rgb(255, 255, 255, 0.5);
+}
+.sun::after {
+    content: attr(data-planet);
+    position: absolute;
+    display: block;
+    white-space: nowrap;
+    color: var(--clr-text);
+    font-size: var(--fs-header);
+    font-family: var(--ff-header);
+    top: 40%;
+    right: 0;
+    transform: scale(0);
+    width: max-content;
+    transition:
+    transform ease-out 200ms,
+    right ease-out 200ms,
+    top ease-out 200ms;
+}
+.sun:hover::after {
+    transform: scale(1.5);
+    right: -10rem;
+    top: 25%;
+}
+.select {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    width: 10px;
+    height: 10px;
+}
+.planet-section {
+    height: 100vh;
+    width: 90vw;
+    float: right;
+    align-items: center;
+    justify-content: space-around;
+}
+.planet {
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 500ms ease;
+    position: relative;
+}
+.planet-section .planet:nth-child(1) {
+    background-color: var(--clr-mercury);
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.planet-section .planet:nth-child(2) {
+    background-color: var(--clr-venus);
+    width: 2rem;
+    height: 2rem;
+}
+.planet-section .planet:nth-child(3) {
+    background-color: var(--clr-earth);
+    width: 2.6rem;
+    height: 2.6rem;
+}
+.planet-section .planet:nth-child(4) {
+    background-color: var(--clr-mars);
+    width: 2.3rem;
+    height: 2.3rem;
+}
+.planet-section .planet:nth-child(5) {
+    background-color: var(--clr-jupiter);
+    width: 10rem;
+    height: 10rem;
+}
+.planet-section .planet:nth-child(6) {
+    background-color: var(--clr-saturn);
+    width: 9rem;
+    height: 9rem;
+}
+.planet-section .planet:nth-child(7) {
+    background-color: var(--clr-uranus);
+    width: 3.7rem;
+    height: 3.7rem;
+}
+.planet-section .planet:nth-child(8) {
+    background-color: var(--clr-neptune);
+    width: 3.7rem;
+    height: 3.7rem;
+}
+.planet:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 10px rgb(255, 255, 255, 0.5);
+}
+.planet::after {
+    content: attr(data-planet);
+    position: absolute;
+    display: block;
+    white-space: nowrap;
+    color: var(--clr-text);
+    font-size: var(--fs-header);
+    font-family: var(--ff-header);
+    bottom: 0;
+    right: 0;
+    transform: scale(0);
+    width: max-content;
+    transition:
+    transform ease-out 200ms,
+    bottom ease-out 200ms;
+}
+.planet:nth-child(1)::after {
+    right: -5.2rem;
+    bottom: -20%;
+}
+.planet:nth-child(2)::after {
+    right: -2.5rem;
+}
+.planet:nth-child(3)::after {
+    right: -2.5rem;
+}
+.planet:nth-child(4)::after {
+    right: -1.7rem;
+}
+.planet:nth-child(5)::after {
+    right: 1rem;
+    bottom: 70%;
+}
+.planet:nth-child(6)::after {
+    right: -0.5rem;
+    bottom: 70%;
+}
+.planet:nth-child(7)::after {
+    right: -2.3rem;
+    bottom: 20%;
+}
+.planet:nth-child(8)::after {
+    right: -3rem;
+}
+.planet:hover::after {
+    transform: scale(1);
+    bottom: 100%;
+}
+
+/* ------------------------------OVERLAY---------------------------------- */
+
+.overlay {
+    position: absolute;
+    background: linear-gradient(269.84deg, #0C164D 0.11%, #190B22 99.83%);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+    z-index: 2;
+    color: var(--clr-text);
+    font-family: var(--ff-text);
+}
+.wrapper {
+    display: grid;
+    width: 100vw;
+    width: 45%;
+    height: 100%;
+    margin: 0 auto;
+    grid-template-rows: 2.2fr 1fr 1fr;
+}
+.facts h2 {
+    font-family: var(--ff-header);
+    font-size: var(--fs-sub-header);
+    margin-top: 1rem;
+}
+.wrapper p {
+    font-family: var(--ff-text);
+    font-size: var(--fs-sub-header);
+}
+.moons h2 {
+    font-family: var(--ff-header);
+    font-size: var(--fs-sub-header);
+    margin-top: 1rem;
+}
+.planet-color {
+    position: absolute;
+    width: 100vh;
+    height: 120vh;
+    border-radius: 50%;
+    top: -10%;
+    left: -750px;
+    box-shadow: 0px 0px 50px rgb(255, 255, 255, 0.5);
+}
+.facts {
+    border-top: 2px solid rgb(255, 255, 255, 0.3);
+    border-bottom: 2px solid rgb(255, 255, 255, 0.3);
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+.describtion--header {
+    height: 20%;
+    margin: 2rem 0 1rem 0;
+    font-size: 1.5rem;
+    letter-spacing: 0.6rem;
+    font-family: var(--ff-logotext);
+    color: var(--clr-logotext);
+}
+.describtion--header h1 {
+    font-size: var(--fs-header);
+    font-family: var(--ff-header);
+    color: var(--clr-text);
+}
+.moons-list {
+    display: flex;
+    margin-top: 1rem;
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.moon {
+    width: max-content;
+}
+.exit {
+    position: absolute;
+    font-size: 2rem;
+    top: 1rem;
+    right: 3rem;
+    cursor: pointer;
+}
+.show {
+    display: block;
+}

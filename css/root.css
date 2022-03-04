@@ -1,0 +1,47 @@
+:root {
+    --clr-text: #ffffff;
+    --clr-logotext: #FFD029;
+
+    --clr-mercury: #888888;
+    --clr-venus: #E7CDCD;
+    --clr-earth: #428ED5;
+    --clr-mars: #EF5F5F;
+    --clr-jupiter: #E29468;
+    --clr-saturn: #C7AA72;
+    --clr-uranus: #C9D4F1;
+    --clr-neptune: #7A91A7;
+    --clr-sun: #FFD029;
+
+    --ff-header: 'Secular One', sans-serif;
+    --ff-text: 'Roboto Condensed', sans-serif;
+    --ff-logotext: 'Lora', serif;
+
+    --fs-sub-header: 1.3rem;
+    --fs-header: 2.5rem;
+    --fs-text: 1rem;
+}
+
+.Merkurius {
+    background-color: var(--clr-mercury);
+}
+.Venus {
+    background-color: var(--clr-venus)
+}
+.Jorden {
+    background-color: var(--clr-earth)
+}
+.Mars {
+    background-color: var(--clr-mars)
+}
+.Jupiter {
+    background-color: var(--clr-jupiter)
+}
+.Saturnus {
+    background-color: var(--clr-saturn)
+}
+.Uranus {
+    background-color: var(--clr-uranus)
+}
+.Neptunus {
+    background-color: var(--clr-neptune)
+}
